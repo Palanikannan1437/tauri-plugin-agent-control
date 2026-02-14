@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/palanik1/tauri-plugin-agent-control"
+    "url": "https://github.com/Palanikannan1437/tauri-plugin-agent-control"
   },
   "keywords": ["tauri", "agent", "devtools", "testing", "automation", "e2e"]
 }

@@ -72,35 +72,44 @@ curl -s http://localhost:9876/health
 
 ## AI Agent Setup
 
-### Install the Amp/AI agent skill
-
-Copy the `SKILL.md` from this package into your project's skill directory:
+### Install the skill (recommended — works with 30+ agents)
 
 ```bash
-# Project-level (recommended)
+npx skills add Palanikannan1437/tauri-plugin-agent-control
+```
+
+This auto-detects your installed AI agents (Amp, Claude Code, Cursor, Copilot, Cline, etc.) and installs the skill to the right location.
+
+### Or install manually
+
+```bash
+# For Amp / Gemini CLI / Codex
 mkdir -p .agents/skills/tauri-agent-control
-cp node_modules/tauri-plugin-agent-control/SKILL.md .agents/skills/tauri-agent-control/SKILL.md
+curl -o .agents/skills/tauri-agent-control/SKILL.md \
+  https://raw.githubusercontent.com/Palanikannan1437/tauri-plugin-agent-control/main/SKILL.md
 
-# Or user-level (available across all projects)
-mkdir -p ~/.config/agents/skills/tauri-agent-control
-cp node_modules/tauri-plugin-agent-control/SKILL.md ~/.config/agents/skills/tauri-agent-control/SKILL.md
+# For Claude Code
+mkdir -p .claude/skills/tauri-agent-control
+curl -o .claude/skills/tauri-agent-control/SKILL.md \
+  https://raw.githubusercontent.com/Palanikannan1437/tauri-plugin-agent-control/main/SKILL.md
+
+# For Cursor
+mkdir -p .cursor/skills/tauri-agent-control
+curl -o .cursor/skills/tauri-agent-control/SKILL.md \
+  https://raw.githubusercontent.com/Palanikannan1437/tauri-plugin-agent-control/main/SKILL.md
 ```
 
-Or install via npm and copy:
+### What the agent can do
 
-```bash
-npm install tauri-plugin-agent-control
-cp node_modules/tauri-plugin-agent-control/SKILL.md .agents/skills/tauri-agent-control/SKILL.md
-```
-
-Once installed, your AI agent (Amp, Claude Code, etc.) can interact with your running Tauri app via natural language:
+Once installed, your AI agent can interact with your running Tauri app via natural language:
 
 - *"Take a screenshot of the app"*
 - *"Click the Submit button"*
 - *"Fill in the email field with test@example.com"*
 - *"Check if the sidebar is visible"*
+- *"Intercept network requests to /api/users"*
 
-The agent uses the skill to translate these into the appropriate `curl` commands to the HTTP bridge.
+The agent uses the skill to translate these into `curl` commands to the HTTP bridge.
 
 ## Quick Start
 

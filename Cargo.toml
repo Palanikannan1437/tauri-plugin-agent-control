@@ -6,7 +6,7 @@ authors = ["Palani Kannan"]
 license = "MIT"
 edition = "2021"
 links = "tauri-plugin-agent-control"
-repository = "https://github.com/palanik1/tauri-plugin-agent-control"
+repository = "https://github.com/Palanikannan1437/tauri-plugin-agent-control"
 keywords = ["tauri", "agent", "devtools", "automation", "e2e"]
 categories = ["development-tools::testing", "gui"]
 
