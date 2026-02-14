@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-agent-control-respond"
+description = "Enables the agent_control_respond command without any pre-configured scope."
+commands.allow = ["agent_control_respond"]
+
+[[permission]]
+identifier = "deny-agent-control-respond"
+description = "Denies the agent_control_respond command without any pre-configured scope."
+commands.deny = ["agent_control_respond"]

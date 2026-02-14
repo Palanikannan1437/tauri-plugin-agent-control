@@ -1,0 +1,11 @@
+{
+  "name": "tauri-plugin-agent-control",
+  "version": "0.1.1",
+  "description": "Dev-only HTTP bridge for observing and controlling Tauri webviews — like Chrome DevTools Protocol, but for Tauri.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palanik1/tauri-plugin-agent-control"
+  },
+  "keywords": ["tauri", "agent", "devtools", "testing", "automation", "e2e"]
+}

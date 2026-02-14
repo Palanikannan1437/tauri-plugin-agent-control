@@ -1,0 +1,3 @@
+[default]
+description = "Default permissions for tauri-plugin-agent-control"
+permissions = ["allow-agent-control-respond"]

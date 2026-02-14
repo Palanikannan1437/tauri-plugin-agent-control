@@ -1,0 +1,22 @@
+[package]
+name = "tauri-plugin-agent-control"
+version = "0.1.1"
+description = "Dev-only HTTP bridge for observing and controlling Tauri webviews — like Chrome DevTools Protocol, but for Tauri."
+authors = ["Palani Kannan"]
+license = "MIT"
+edition = "2021"
+links = "tauri-plugin-agent-control"
+repository = "https://github.com/palanik1/tauri-plugin-agent-control"
+keywords = ["tauri", "agent", "devtools", "automation", "e2e"]
+categories = ["development-tools::testing", "gui"]
+
+[dependencies]
+tauri = { version = "2", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt", "net", "sync", "macros", "time", "io-util"] }
+rand = "0.8"
+urlencoding = "2"
+
+[build-dependencies]
+tauri-plugin = { version = "2", features = ["build"] }
